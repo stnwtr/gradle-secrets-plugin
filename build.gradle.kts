@@ -31,7 +31,7 @@ gradlePlugin {
 }
 
 pluginBundle {
-    website = "https://gitea.stnwtr.at/stnwtr/gradle-secrets-plugin"
-    vcsUrl = "https://gitea.stnwtr.at/stnwtr/gradle-secrets-plugin.git"
+    website = "https://github.com/stnwtr/gradle-secrets-plugin"
+    vcsUrl = "https://github.com/stnwtr/gradle-secrets-plugin.git"
     tags = listOf("secrets", "value", "secret", "credentials", "file", "hidden", "key", "password", "token")
 }
