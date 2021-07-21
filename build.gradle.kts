@@ -9,6 +9,7 @@ plugins {
     kotlin("jvm") version "1.4.31"
     `java-gradle-plugin`
     `maven-publish`
+    id("com.gradle.plugin-publish") version "0.14.0"
 }
 
 group = "at.stnwtr"
@@ -23,6 +24,14 @@ gradlePlugin {
         create(rootProject.name) {
             id = "$group.${rootProject.name}"
             implementationClass = "$group.${rootProject.name.replace('-', '_')}.SecretsPlugin"
+            displayName = "Gradle Secrets Plugin"
+            description = "A small plugin which loads an additional properties file for secret values."
         }
     }
+}
+
+pluginBundle {
+    website = "https://gitea.stnwtr.at/stnwtr/gradle-secrets-plugin"
+    vcsUrl = "https://gitea.stnwtr.at/stnwtr/gradle-secrets-plugin.git"
+    tags = listOf("secrets", "value", "secret", "credentials", "file", "hidden", "key", "password", "token")
 }
