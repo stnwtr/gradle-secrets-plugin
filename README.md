@@ -17,7 +17,7 @@ It is also impossible to have the same property name with different values in tw
 
 ## Usage
 
-1. Apply the gradle plugin to your project (Kotlin DSL: `id("at.stnwtr.gradle-secrets-plugin") version "1.0.0"`).
+1. Apply the gradle plugin to your project (Kotlin DSL: `id("at.stnwtr.gradle-secrets-plugin") version "1.0.1"`).
 2. Create a new file named `secrets.properties` in the project root.
 2. Optionally, create a `secrets.example.properties` file which describes the used secrets.
 4. Done! Now you can set values in the `secrets.properties` without publishing the file.
@@ -28,7 +28,7 @@ An example task in the `build.gradle.kts` (Kotlin DSL):
 
 ```kotlin
 plugins {
-    id("at.stnwtr.gradle-secrets-plugin") version "1.0.0"
+    id("at.stnwtr.gradle-secrets-plugin") version "1.0.1"
 }
 
 // Throw an exception if the value was not found - else null is returned
